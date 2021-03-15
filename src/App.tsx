@@ -1,8 +1,5 @@
-
 const App = () => {
-  return (
-    <>Start Here</>
-  );
-}
+  return <>Start Here</>;
+};
 
 export default App;
