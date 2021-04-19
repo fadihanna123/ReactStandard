@@ -1,0 +1,47 @@
+// Variables
+$zero: 0;
+$hundred: 100%;
+$box: border-box;
+$none: none;
+$font: Cambria, Georgia;
+$ten: 10px;
+$auto: auto;
+$media: 1900px;
+
+// Selectors
+$selectorMap: (
+  global: "*",
+  body: "body",
+  img: "img",
+  wrapper: ".container",
+);
+
+#{map-get($selectorMap, global)} {
+  margin: $zero;
+  padding: $zero;
+  font-size: $hundred;
+  -webkit-box-sizing: $box;
+  box-sizing: $box;
+  border: $zero;
+  outline: $zero;
+  list-style: $none;
+}
+
+#{map-get($selectorMap, img)} {
+  width: $hundred;
+  max-width: $hundred;
+  height: $auto;
+}
+
+#{map-get($selectorMap, body)} {
+  font: $font;
+}
+
+@media screen and (max-width: $media) {
+  #{map-get($selectorMap, body)} {
+    margin: $zero;
+    padding: $zero;
+    font-size: $hundred;
+    width: $hundred;
+  }
+}
