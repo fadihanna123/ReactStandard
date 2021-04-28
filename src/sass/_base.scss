@@ -1,13 +1,3 @@
-// Variables
-$zero: 0;
-$hundred: 100%;
-$box: border-box;
-$none: none;
-$font: Cambria, Georgia;
-$ten: 10px;
-$auto: auto;
-$media: 1900px;
-
 // Selectors
 $selectorMap: (
   global: "*",
@@ -17,31 +7,22 @@ $selectorMap: (
 );
 
 #{map-get($selectorMap, global)} {
-  margin: $zero;
-  padding: $zero;
-  font-size: $hundred;
-  -webkit-box-sizing: $box;
-  box-sizing: $box;
-  border: $zero;
-  outline: $zero;
-  list-style: $none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  list-style: none;
 }
 
 #{map-get($selectorMap, img)} {
-  width: $hundred;
-  max-width: $hundred;
-  height: $auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 #{map-get($selectorMap, body)} {
-  font: $font;
-}
-
-@media screen and (max-width: $media) {
-  #{map-get($selectorMap, body)} {
-    margin: $zero;
-    padding: $zero;
-    font-size: $hundred;
-    width: $hundred;
-  }
+  font: Cambria, Georgia;
 }
