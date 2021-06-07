@@ -1,5 +1,6 @@
 // Variables
 $box: border-box;
+$colors: ();
 
 // Selectors
 $selectorMap: (
@@ -9,7 +10,16 @@ $selectorMap: (
   wrapper: ".container",
 );
 
-#{map-get($selectorMap, global)} {
+// Functions
+@function color($val) {
+  @return map-get($colors, $val);
+}
+
+@function selector($slc) {
+  @return map-get($selectorMap, $slc);
+}
+
+#{selector(global)} {
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -20,13 +30,13 @@ $selectorMap: (
   list-style: none;
 }
 
-#{map-get($selectorMap, img)} {
+#{selector(img)} {
   width: 100%;
   max-width: 100%;
   height: auto;
 }
 
-#{map-get($selectorMap, body)} {
+#{selector(body)} {
   font: Cambria, Georgia;
 }
 
