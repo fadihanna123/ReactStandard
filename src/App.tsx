@@ -1,9 +1,5 @@
 const App = () => {
-  return (
-    <>
-      <div className="container">Start Here</div>
-    </>
-  );
+  return <section className="container">Start Here</section>;
 };
 
 export default App;
